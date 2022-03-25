@@ -12,11 +12,17 @@ resources :users, only: [:index, :show, :create]do
       get :followings
       get :followers
     end
-    collection do
-    get :search
+    
+  member do
+    get :likes
     end
+  
+  
+ 
   end
+  
 
 resources :microposts, only: [:create, :destroy]
 resources :relationships, only: [:create, :destroy]
+resources :okiniiris, only: [:create, :destroy]
 end
