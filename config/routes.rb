@@ -11,10 +11,7 @@ resources :users, only: [:index, :show, :create]do
   member do
       get :followings
       get :followers
-    end
-    
-  member do
-    get :likes
+      get :likes
     end
   
   
