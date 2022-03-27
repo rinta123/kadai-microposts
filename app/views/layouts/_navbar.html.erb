@@ -19,7 +19,7 @@
         <li class="dropdown-item"><%= link_to 'Logout', logout_path, method: :delete, class: 'nav-link' %></li>
       </ul>
       <ul class="navbar-nav">
-       <a href="<%= likes_user_path(current_user) %>" ><font size='5' color='white'> likepost <%= @count_likes %></font></a>
+       <a href="<%= likes_user_path(current_user) %>" ><font size='5' color='white'> MyLikes </font></a>
       </ul>
     </div>
   <% else %>
