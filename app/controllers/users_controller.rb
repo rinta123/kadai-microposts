@@ -42,7 +42,7 @@ class UsersController < ApplicationController
   
   def likes
     @user = User.find(params[:id])
-    @pagy, @microposts = pagy(@user.feedlikes.order(id: :desc),)
+    @pagy, @microposts = pagy(@user.likes.order(id: :desc),)
   
   end
 

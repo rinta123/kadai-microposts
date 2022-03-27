@@ -10,12 +10,18 @@
           <div>
             <p><%= micropost.content %></p>
           </div>
-          <%= render 'okiniiris/like_button', micropost: micropost %>
-          <div>
-            <% if current_user == micropost.user %>
-              <%= link_to "Delete", micropost, method: :delete, data: { confirm: "You sure?" }, class: 'btn btn-danger btn-sm' %>
-            <% end %>
+          
+          <div class="btn-toolbar">
+          <div class="btn-group">
+           <%= render 'okiniiris/like_button', micropost: micropost %>
+           
+           <% if current_user == micropost.user %>
+              <%= link_to "Delete", micropost, method: :delete, data: { confirm: "You sure?" }, class: 'btn btn-dark w-100' %>
+           <% end %>
+           
           </div>
+          </div>
+          
         </div>
       </li>
     <% end %>
